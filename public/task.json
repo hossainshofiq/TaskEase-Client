@@ -1,0 +1,38 @@
+[
+    {
+      "_id": "task_001",
+      "title": "Design Homepage UI",
+      "description": "Create a responsive homepage layout with a clean design.",
+      "timestamp": "2025-02-20T12:00:00Z",
+      "category": "To-Do"
+    },
+    {
+      "_id": "task_002",
+      "title": "Fix Login Bug",
+      "description": "Resolve the issue where users cannot log in with Google OAuth.",
+      "timestamp": "2025-02-20T12:05:00Z",
+      "category": "In Progress"
+    },
+    {
+      "_id": "task_003",
+      "title": "Deploy Backend API",
+      "description": "Push the latest backend changes to production and test API endpoints.",
+      "timestamp": "2025-02-20T12:10:00Z",
+      "category": "Done"
+    },
+    {
+      "_id": "task_004",
+      "title": "Implement Drag & Drop",
+      "description": "Add drag-and-drop functionality for task reordering.",
+      "timestamp": "2025-02-20T12:15:00Z",
+      "category": "To-Do"
+    },
+    {
+      "_id": "task_005",
+      "title": "Optimize Database Queries",
+      "description": "Improve query performance to reduce response time.",
+      "timestamp": "2025-02-20T12:20:00Z",
+      "category": "In Progress"
+    }
+  ]
+  
