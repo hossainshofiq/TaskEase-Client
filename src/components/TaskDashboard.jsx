@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { useQuery } from '@tanstack/react-query';
 import TaskCard from './TaskCard';
 import moment from 'moment';
+import { FaFilter } from 'react-icons/fa';
 
 const TaskDashboard = () => {
 
@@ -61,9 +62,9 @@ const TaskDashboard = () => {
                     document.getElementById('my_modal_5').close();
                     toDoRefetch();
                     Swal.fire({
-                        position: "top-end",
+                        position: "center",
                         icon: "success",
-                        title: "Your work has been saved",
+                        title: "Your new task added successful",
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -77,29 +78,33 @@ const TaskDashboard = () => {
     return (
         <div>
             <div className='w-11/12 mx-auto'>
-                <div className='flex justify-between gap-5 my-10'>
+                <div className='flex flex-wrap justify-between flex-col md:flex-row gap-5 my-10'>
                     {/* to-do task */}
                     <div className='flex-1 border p-4 rounded-md bg-base-200'>
-                        <h3 className='font-bold mb-2'>To-Do</h3>
+                        <h3 className='font-bold flex items-center justify-between'>To-Do <FaFilter></FaFilter></h3>
+                        <div className='divider'></div>
                         <button onClick={() => document.getElementById('my_modal_5').showModal()} className="btn w-full flex gap-2 bg-blue-600 text-white hover:bg-blue-700">
                             <MdAddTask></MdAddTask>
                             Add New Task
                         </button>
 
-                        {
-                            toDoTasksList.map(toDo => <TaskCard key={toDo._id} toDo={toDo}></TaskCard>)
-                        }
+                        <div className='lg:flex flex-col gap-5 mt-5'>
+                            {
+                                toDoTasksList.map((toDo, idx) => <TaskCard idx={idx} key={toDo._id} toDo={toDo}></TaskCard>)
+                            }
+                        </div>
                     </div>
 
                     {/* running task */}
                     <div className='flex-1 border p-4 rounded-md bg-base-200'>
-                        <h3 className='font-bold mb-2'>In Progress</h3>
-
+                        <h3 className='font-bold flex items-center justify-between'>In Progress <FaFilter></FaFilter></h3>
+                        <div className='divider'></div>
                     </div>
 
                     {/* done task */}
                     <div className='flex-1 border p-4 rounded-md bg-base-200'>
-                        <h3 className='font-bold mb-2'>Done</h3>
+                        <h3 className='font-bold flex items-center justify-between'>Done <FaFilter></FaFilter></h3>
+                        <div className='divider'></div>
                     </div>
                 </div>
             </div>
