@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "lora" : ["Lora", "serif"]
+        "lora" : ["Lora", "serif"],
+        "ubuntu" : ["ubuntu", "serif"]
       }
     },
   },

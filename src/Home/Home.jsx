@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import TaskDashboard from '../components/TaskDashboard';
+import DashboardTask from '../components/DashboardTask';
+import Footer from '../components/Footer';
+
 
 const Home = () => {
 
     return (
         <div>
             <Navbar></Navbar>
-            <TaskDashboard></TaskDashboard>
+            <DashboardTask></DashboardTask>
+            <Footer></Footer>
         </div>
     );
 };

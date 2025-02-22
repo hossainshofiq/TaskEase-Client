@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <QueryClientProvider client={queryClient}>
-        <div className='font-lora'>
+        <div className='font-ubuntu'>
           <RouterProvider router={router} />
         </div>
       </QueryClientProvider>

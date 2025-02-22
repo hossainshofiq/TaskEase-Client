@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import icon from '../assets/icon.png'
 
 const Navbar = () => {
 
@@ -44,6 +45,7 @@ const Navbar = () => {
             })
     };
 
+    // theme controller
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
     useEffect(() => {
@@ -56,16 +58,13 @@ const Navbar = () => {
     }
 
     return (
-
         <>
-
-
-            <div className="navbar bg-base-100 px-2 md:px-12 lg:px-20 shadow-lg">
+            <div className="navbar bg-base-100 px-2 md:px-12 lg:px-20 shadow-lg fixed top-0 z-50">
                 <div className="navbar-start">
-                    <a className="btn btn-ghost text-xl">TaskEase</a>
+                    <a className="btn btn-ghost text-xl">
+                        <img src={icon} /> TaskEase</a>
                 </div>
                 <div className="navbar-end gap-2 lg:gap-4">
-
                     <label className="swap swap-rotate">
                         <input onChange={toggleTheme} type="checkbox" className="theme-controller" value="synthwave" />
                         <svg
@@ -90,12 +89,12 @@ const Navbar = () => {
                                 {
                                     loading ? <span className="loading loading-ring loading-lg"></span>
                                         :
-                                        <img className='w-12 rounded-full' src={user.photoURL} alt="" />
+                                        <img className='w-12 rounded-full border border-black' src={user.photoURL} alt="" />
                                 }
-                            <button onClick={handleLogout} className='btn btn-outline'>Logout</button>
+                                <button onClick={handleLogout} className='btn btn-outline'>Logout</button>
                             </div>
                             :
-                        <button className='btn btn-outline' onClick={handleGoogleLogin}>Google</button>
+                            ""
                     }
                 </div>
             </div>
