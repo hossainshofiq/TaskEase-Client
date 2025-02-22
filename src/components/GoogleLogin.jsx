@@ -16,7 +16,7 @@ const GoogleLogin = () => {
     const handleGoogleLogin = () => {
         googleLogin()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 // alert('login done');
 
                 Swal.fire({
@@ -27,16 +27,16 @@ const GoogleLogin = () => {
                     timer: 1500
                 });
 
-                const userInfo = {
-                    uid: result.user?.uid,
-                    email: result.user?.email,
-                    displayName: result.user?.displayName,
-                    photoURL: result.user?.photoURL
-                }
-                axiosSecure.put('/users', userInfo)
-                    .then(res => {
-                        console.log(res.data);
-                    })
+                // const userInfo = {
+                //     uid: result.user?.uid,
+                //     email: result.user?.email,
+                //     displayName: result.user?.displayName,
+                //     photoURL: result.user?.photoURL
+                // }
+                // axiosSecure.put('/users', userInfo)
+                //     .then(res => {
+                //         console.log(res.data);
+                //     })
 
             })
 

@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <DashboardTask></DashboardTask>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

@@ -10,7 +10,7 @@ const Navbar = () => {
     const handleGoogleLogin = () => {
         googleLogin()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 // alert('login done');
 
                 Swal.fire({
@@ -41,7 +41,7 @@ const Navbar = () => {
                 });
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
             })
     };
 

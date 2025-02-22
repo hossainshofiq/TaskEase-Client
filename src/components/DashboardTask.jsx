@@ -109,7 +109,9 @@ const DashboardTask = () => {
                     });
                 }
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                // console.log(error);
+            });
     }
 
     const handleDeleteTask = (id) => {
@@ -149,13 +151,15 @@ const DashboardTask = () => {
             .then(res => {
                 setModalFormData(res.data);
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                // console.log(error);
+            })
 
     }
 
     const handleUpdateTask = (event, id) => {
         event.preventDefault();
-        console.log(id);
+        // console.log(id);
 
         const taskId = id;
         const taskTitle = event.target.title.value;
@@ -169,14 +173,14 @@ const DashboardTask = () => {
             taskCategory,
         };
 
-        console.log(updatedTask)
+        // console.log(updatedTask)
 
         document.getElementById('my_modal_4').close();
 
         // Sending the update request
         axiosSecure.put(`/updateATask`, updatedTask)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Updated!",
@@ -187,7 +191,7 @@ const DashboardTask = () => {
                 }
             })
             .catch(error => {
-                console.error("Error updating task:", error);
+                // console.error("Error updating task:", error);
                 Swal.fire({
                     title: "Error!",
                     text: "Failed to update the task. Please try again.",
@@ -201,11 +205,11 @@ const DashboardTask = () => {
 
             <button onClick={() => document.getElementById('my_modal_5').showModal()} className="btn flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-700 mb-2">
                 <MdAddTask className="text-xl"></MdAddTask>
-                Add New Task
+                Add New Taskd
             </button>
 
             <DragDropContext onDragEnd={onDragEnd}>
-                <div className="flex flex-wrap justify-between flex-col lg:flex-row gap-8 h-auto">
+                <div className="flex flex-wrap justify-between flex-col lg:flex-row gap-8">
                     {Object.entries(tasks).map(([columnId, columnTasks]) => (
                         <Droppable key={columnId} droppableId={columnId}>
                             {(provided) => (
