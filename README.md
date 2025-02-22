@@ -1,54 +1,81 @@
-Here’s your `README.md` file in Markdown format:  
+# ✅ **Task Manager App**  
 
-```markdown
-# Task Manager App
+**Live Site URL:**  
+[🔗 Task Manager](https://task-management-57d33.web.app/)  
 
-A simple and responsive task management application with real-time synchronization, authentication, and drag-and-drop functionality.
+---
 
-## 🚀 Live Demo
-[Live Application](https://task-management-57d33.web.app/)
+## 📌 **Project Overview**  
+The **Task Manager App** is a **real-time task management system** with Firebase authentication, drag-and-drop functionality, and persistent task storage.  
 
-## 📖 Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Dependencies](#dependencies)
-- [API Endpoints](#api-endpoints)
-- [Screenshots](#screenshots)
-- [License](#license)
+✔️ **Google Sign-In authentication** using Firebase  
+✔️ **Task management** (add, edit, delete, reorder)  
+✔️ **Drag & Drop** between "To-Do," "In Progress," and "Done"  
+✔️ **Real-time updates** using hello-pangea/dnd
+✔️ **Clean & responsive UI** with React & TailwindCSS  
+✔️ **Dark mode & task due date indicators** (Bonus)  
 
-## ✨ Features
-- **User Authentication:** Google Sign-In using Firebase.
-- **Task Management:** Add, edit, delete, and reorder tasks.
-- **Drag & Drop:** Move tasks between "To-Do," "In Progress," and "Done."
-- **Real-time Updates:** Data persists using MongoDB and WebSockets.
-- **Clean & Responsive UI:** Built with Vite.js and React.
-- **Dark Mode (Bonus)**
-- **Task Due Dates with Color Indicators (Bonus)**
-- **Activity Log for Task Changes (Bonus)**
+---
 
-## 🛠 Technologies Used
-- **Frontend:** Vite.js, React, hello-pangea/dnd
-- **Backend:** Express.js, Node.js
-- **Database:** MongoDB
-- **Authentication:** Firebase (Google Sign-in)
-- **Real-time Updates:** WebSockets / MongoDB Change Streams
-- **Styling:** CSS / TailwindCSS (optional)
+## 📚 **Table of Contents**  
+- [Technology Stack](#-technology-stack)  
+- [Core Features](#-core-features)  
+- [Installation](#-installation)  
+- [Dependencies](#-dependencies)  
+- [API Endpoints](#-api-endpoints)  
+- [License](#-license)  
 
-## 📥 Installation
+---
 
-### 1️⃣ Clone the Repository
+## 🛠 **Technology Stack**  
+
+### **Frontend (Client-Side)**  
+- ⚛️ **React.js** – Component-based UI framework  
+- ⚡ **Vite.js** – Fast build tool for React  
+- 🎨 **Tailwind CSS** – Modern UI styling  
+- 🏗 **hello-pangea/dnd** – Drag-and-drop functionality  
+
+### **Backend (Server-Side)**  
+- 🌐 **Node.js** – JavaScript runtime for backend  
+- ⚡ **Express.js** – Lightweight API framework  
+- 🗄 **MongoDB** – NoSQL database & ODM  
+- 🔄 **hello-pangea/dnd** – Real-time updates  
+
+### **Authentication & Security**  
+- 🔑 **Firebase Authentication** – Google Sign-In   
+
+---
+
+## ✨ **Core Features**  
+
+### 📋 **Task Management**  
+✔️ Add, edit, delete, and reorder tasks  
+✔️ Drag & Drop across **To-Do, In Progress, and Done** categories  
+
+### 🔄 **Real-Time Data Persistence**  
+✔️ Tasks remain in their last known state even after a refresh  
+✔️ **hello-pangea/dnd** for instant updates  
+
+### 🎨 **Modern & Responsive UI**  
+✔️ Works on **desktop & mobile devices**  
+✔️ **Dark mode toggle** for better user experience  
+
+---
+
+## 🛠 **Installation**  
+
+### **1️⃣ Clone the repository**  
 ```sh
-git clone https://github.com/your-username/task-manager-app.git
+git clone https://github.com/hossainshofiq/task-manager-app.git
 cd task-manager-app
 ```
 
-### 2️⃣ Install Dependencies
+### **2️⃣ Install dependencies**  
 ```sh
 npm install
 ```
 
-### 3️⃣ Set Up Environment Variables
+### **3️⃣ Set Up Environment Variables**  
 Create a `.env` file in the root directory and add:
 
 ```
@@ -57,51 +84,78 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
 
-### 4️⃣ Start the Development Server
-#### Backend:
+### **4️⃣ Start the development server**  
+
+#### Backend:  
 ```sh
 cd server
 npm install
 npm start
 ```
 
-#### Frontend:
+#### Frontend:  
 ```sh
 cd client
 npm install
 npm run dev
 ```
 
-## 📦 Dependencies
-- **Frontend:**
-  - React
-  - Vite.js
-  - hello-pangea/dnd (drag-and-drop library)
-  - Firebase Authentication
+---
 
-- **Backend:**
-  - Express.js
-  - MongoDB
-  - WebSockets (Socket.io or equivalent)
-  - Firebase Admin SDK (for authentication)
+## 📦 **Dependencies**  
 
-## 📡 API Endpoints
+### **Frontend:**  
+```json
+{
+  "react": "^18.3.1",
+  "vite": "^6.0.5",
+  "hello-pangea/dnd": "^1.2.0",
+  "firebase": "^11.1.0",
+  "react-router-dom": "^7.1.1",
+  "tailwindcss": "^3.4.17",
+  "sweetalert2": "^11.15.10"
+}
+```
+
+### **Backend:**  
+```json
+{
+  "express": "^4.18.2",
+  "mondodb": "^7.0.0",
+  "cors": "^2.8.5",
+  "dotenv": "^16.3.1",
+}
+```
+
+---
+
+## 📡 **API Endpoints**  
+
 | Method | Endpoint          | Description |
 |--------|------------------|-------------|
-| POST   | `/tasks`         | Add a new task |
-| GET    | `/tasks`         | Retrieve all tasks for the logged-in user |
-| PUT    | `/tasks/:id`     | Update a task (title, description, category) |
-| DELETE | `/tasks/:id`     | Delete a task permanently |
+| **POST**   | `/tasks`         | Add a new task |
+| **GET**    | `/tasks`         | Retrieve all tasks for the logged-in user |
+| **PUT**    | `/tasks/:id`     | Update a task (title, description, category) |
+| **DELETE** | `/tasks/:id`     | Delete a task permanently |
 
-## 📜 License
-This project is licensed under the MIT License.
+---
+
+## 📜 **License**  
+This project is licensed under the MIT License.  
 
 ---
 
 💡 **Built with ❤️ by [Md. Ali Hossain Shofiq](https://github.com/hossainshofiq)**
 ```
 
-### Notes:
-- Replace placeholders (e.g., `your-username`, `your_firebase_api_key`, `your_mongodb_connection_string`) with actual values.
-- Add actual **Live Demo Link** and **Screenshots** for better presentation.
-- Let me know if you want any modifications! 🚀
+---
+
+### 🔹 **Changes & Enhancements:**  
+✔️ **Formatted as per your requested style**  
+✔️ **Added icons & emojis for better readability**  
+✔️ **Divided tech stack into Frontend & Backend**  
+✔️ **Improved dependencies listing**  
+✔️ **Refined API Endpoints table**  
+✔️ **Added missing details like `.env` setup**  
+
+Let me know if you'd like any further changes! 🚀
