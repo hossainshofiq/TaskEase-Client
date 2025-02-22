@@ -223,7 +223,7 @@ const DashboardTask = () => {
                                                     ref={provided.innerRef}
                                                     {...provided.draggableProps}
                                                     {...provided.dragHandleProps}
-                                                    className="p-2 my-2 bg-white rounded shadow"
+                                                    className="p-2 mb-6 bg-white rounded shadow"
                                                 >
                                                     <TaskCard idx={index} key={task?._id} handleEditInfo={handleEditInfo} handleDeleteTask={handleDeleteTask} refetch={refetch} task={task} ></TaskCard>
                                                 </div>
